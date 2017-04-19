@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\AsteroidSpawn.js">
+    <Files>
+      <File FileName="Assets\Script\DesScore.js" Line="21" Column="3" />
+      <File FileName="Assets\Script\Asteroids.js" Line="7" Column="69" />
+      <File FileName="Assets\Script\Destroyer.js" Line="6" Column="2" />
+      <File FileName="Assets\Script\Controller.js" Line="15" Column="23" />
+      <File FileName="Assets\Script\Bullet.js" Line="11" Column="3" />
+      <File FileName="Assets\Script\AsteroidSpawn.js" Line="13" Column="33" />
+      <File FileName="Assets\Script\SupGen.js" Line="13" Column="31" />
+      <File FileName="Assets\Script\Supply.js" Line="12" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
