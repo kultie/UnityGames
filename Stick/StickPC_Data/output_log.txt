@@ -1,0 +1,134 @@
+Initialize engine version: 4.7.0f1 (9c73fd3cda99)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Vendor:   NVIDIA
+    VRAM:     4050 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\u\Stick\StickPC_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\u\Stick\StickPC_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\u\Stick\StickPC_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\u\Stick\StickPC_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\u\Stick\StickPC_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\u\Stick\StickPC_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.034 seconds
+desktop: 1440x900 60Hz; virtual: 1440x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: F:\u\Stick\StickPC_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\u\Stick\StickPC_Data\Managed\System.dll (this message is harmless)
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 3.661814 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 1055.
+Total: 6.015688 ms (FindLiveObjects: 0.046272 ms CreateObjectMapping: 0.009314 ms MarkObjects: 0.190196 ms  DeleteObjects: 5.342938 ms)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.997857 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 121 unused Assets to reduce memory usage. Loaded Objects now: 225.
+Total: 5.762393 ms (FindLiveObjects: 0.009014 ms CreateObjectMapping: 0.006910 ms MarkObjects: 0.100356 ms  DeleteObjects: 5.416253 ms)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.372881 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1055.
+Total: 0.764693 ms (FindLiveObjects: 0.028244 ms CreateObjectMapping: 0.009915 ms MarkObjects: 0.188394 ms  DeleteObjects: 0.220243 ms)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Setting volume to 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Dafuq
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.828993 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 993.
+Total: 0.428769 ms (FindLiveObjects: 0.022234 ms CreateObjectMapping: 0.009915 ms MarkObjects: 0.172469 ms  DeleteObjects: 0.003004 ms)
+
+UnloadTime: 1.195565 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 993.
+Total: 0.458215 ms (FindLiveObjects: 0.022234 ms CreateObjectMapping: 0.010816 ms MarkObjects: 0.169464 ms  DeleteObjects: 0.003004 ms)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Dafuq
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Dafuq
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Setting volume to 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 0.725632 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 124 unused Assets to reduce memory usage. Loaded Objects now: 196.
+Total: 3.421139 ms (FindLiveObjects: 0.009915 ms CreateObjectMapping: 0.010215 ms MarkObjects: 0.128901 ms  DeleteObjects: 3.049459 ms)
+
+UnloadTime: 0.277032 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 196.
+Total: 0.341933 ms (FindLiveObjects: 0.006309 ms CreateObjectMapping: 0.007511 ms MarkObjects: 0.106065 ms  DeleteObjects: 0.002103 ms)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+UnloadTime: 5.245586 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 225.
+Total: 0.689576 ms (FindLiveObjects: 0.019530 ms CreateObjectMapping: 0.009314 ms MarkObjects: 0.115680 ms  DeleteObjects: 0.290252 ms)
+
+UnloadTime: 0.322403 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 225.
+Total: 0.350046 ms (FindLiveObjects: 0.006610 ms CreateObjectMapping: 0.007812 ms MarkObjects: 0.106666 ms  DeleteObjects: 0.002103 ms)
+
+Setting volume to 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+

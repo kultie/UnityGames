@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 831b882ed59eab64081ecb6736480c90
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jumping_0
+    21300002: Jumping_1
+    21300004: Jumping_2
+    21300006: Jumping_3
+    21300008: Jumping_4
+    21300010: Jumping_5
+    21300012: Jumping_6
+    21300014: Jumping_7
+    21300016: Jumping_8
+    21300018: Jumping_9
+    21300020: Jumping_10
+    21300022: Jumping_11
+    21300024: Jumping_12
+    21300026: Jumping_13
+    21300028: Jumping_14
+    21300030: Jumping_15
+    21300032: Jumping_16
+    21300034: Jumping_17
+    21300036: Jumping_18
+    21300038: Jumping_19
+    21300040: Jumping_20
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Jumping_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 134
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_1
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 134
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 134
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 134
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 135
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 104
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 104
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_7
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 102
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 102
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_9
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 102
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 69
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_11
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 69
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_12
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 70
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_13
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 70
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_14
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 70
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 40
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_16
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 40
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_17
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 39
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 38
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_19
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 38
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Jumping_20
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
