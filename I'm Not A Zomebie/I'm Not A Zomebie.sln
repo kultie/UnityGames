@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I'm Not A Zomebie", "I'm Not A Zomebie.csproj", "{1D03B17E-21FE-1A12-B498-67759ED92A7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I'm Not A Zomebie.Editor", "I'm Not A Zomebie.Editor.csproj", "{133BEB9E-B764-5C8E-038D-9B1A6D2F4865}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D03B17E-21FE-1A12-B498-67759ED92A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D03B17E-21FE-1A12-B498-67759ED92A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D03B17E-21FE-1A12-B498-67759ED92A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D03B17E-21FE-1A12-B498-67759ED92A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{133BEB9E-B764-5C8E-038D-9B1A6D2F4865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133BEB9E-B764-5C8E-038D-9B1A6D2F4865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133BEB9E-B764-5C8E-038D-9B1A6D2F4865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133BEB9E-B764-5C8E-038D-9B1A6D2F4865}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
