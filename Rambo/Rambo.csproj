@@ -86,6 +86,7 @@
     <Compile Include="Assets\Script\DestroyAfterTime.cs" />
     <Compile Include="Assets\Script\EnemyManager.cs" />
     <Compile Include="Assets\Script\EnemyPatrol.cs" />
+    <Compile Include="Assets\Script\FlyController.cs" />
     <Compile Include="Assets\Script\GunPointRotation.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
