@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: d2ab4a01b7dec5346ad5524c2aaf63c2
-timeCreated: 1510768457
+guid: 4d98daee3e71e644f9222d7badd86652
+timeCreated: 1510814902
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Fire_Golem_1
-    21300002: Fire_Golem_2
-    21300004: Fire_Golem_3
-    21300006: Fire_Golem_0
+    21300000: Fire_Golem_Moving_0
+    21300002: Fire_Golem_Moving_2
+    21300004: Fire_Golem_Moving_3
+    21300006: Fire_Golem_Moving_4
+    21300008: Fire_Golem_Moving_8
+    21300010: Fire_Golem_Moving_9
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -90,51 +92,77 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire_Golem_1
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 68
-        width: 59
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fire_Golem_2
+      name: Fire_Golem_Moving_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 4
-        width: 57
-        height: 55
+        y: 132
+        width: 59
+        height: 53
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Fire_Golem_3
+      name: Fire_Golem_Moving_2
       rect:
         serializedVersion: 2
         x: 69
-        y: 4
+        y: 133
+        width: 59
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Golem_Moving_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 69
+        width: 61
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Golem_Moving_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 69
         width: 58
-        height: 54
+        height: 52
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Fire_Golem_0
+      name: Fire_Golem_Moving_8
       rect:
         serializedVersion: 2
         x: 5
-        y: 68
+        y: 5
         width: 59
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fire_Golem_Moving_9
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 5
+        width: 57
         height: 55
       alignment: 7
       pivot: {x: 0.5, y: 0}

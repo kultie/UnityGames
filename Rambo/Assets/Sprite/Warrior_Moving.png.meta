@@ -1,13 +1,15 @@
 fileFormatVersion: 2
-guid: d2ab4a01b7dec5346ad5524c2aaf63c2
-timeCreated: 1510768457
+guid: 196a987859302374180d9906f9463209
+timeCreated: 1510841037
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Fire_Golem_1
-    21300002: Fire_Golem_2
-    21300004: Fire_Golem_3
-    21300006: Fire_Golem_0
+    21300000: Warrior_Moving_0
+    21300002: Warrior_Moving_1
+    21300004: Warrior_Moving_2
+    21300006: Warrior_Moving_3
+    21300008: Warrior_Moving_4
+    21300010: Warrior_Moving_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -44,7 +46,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -90,52 +92,78 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire_Golem_1
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 68
-        width: 59
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fire_Golem_2
+      name: Warrior_Moving_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 4
-        width: 57
-        height: 55
+        y: 136
+        width: 53
+        height: 49
+      alignment: 9
+      pivot: {x: 0.65, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Warrior_Moving_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 135
+        width: 49
+        height: 50
+      alignment: 9
+      pivot: {x: 0.59, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Warrior_Moving_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 73
+        width: 27
+        height: 47
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Fire_Golem_3
+      name: Warrior_Moving_3
       rect:
         serializedVersion: 2
-        x: 69
-        y: 4
-        width: 58
-        height: 54
+        x: 81
+        y: 72
+        width: 29
+        height: 49
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Fire_Golem_0
+      name: Warrior_Moving_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 68
-        width: 59
-        height: 55
+        x: 17
+        y: 8
+        width: 29
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Warrior_Moving_5
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 7
+        width: 42
+        height: 51
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: d2ab4a01b7dec5346ad5524c2aaf63c2
-timeCreated: 1510768457
+guid: 1411f46c5d26b4e4795f83482365806b
+timeCreated: 1510854713
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Fire_Golem_1
-    21300002: Fire_Golem_2
-    21300004: Fire_Golem_3
-    21300006: Fire_Golem_0
+    21300000: Warrior_Idle_Stance_0
+    21300002: Warrior_Idle_Stance_1
+    21300004: Warrior_Idle_Stance_2
+    21300006: Warrior_Idle_Stance_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -44,7 +44,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -90,54 +90,54 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire_Golem_1
+      name: Warrior_Idle_Stance_0
       rect:
         serializedVersion: 2
-        x: 69
-        y: 68
-        width: 59
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fire_Golem_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 4
-        width: 57
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fire_Golem_3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 4
-        width: 58
+        x: 17
+        y: 69
+        width: 40
         height: 54
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.24, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Fire_Golem_0
+      name: Warrior_Idle_Stance_1
       rect:
         serializedVersion: 2
-        x: 5
-        y: 68
-        width: 59
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 117
+        y: 69
+        width: 40
+        height: 54
+      alignment: 9
+      pivot: {x: 0.24, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Warrior_Idle_Stance_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 5
+        width: 40
+        height: 54
+      alignment: 9
+      pivot: {x: 0.24, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Warrior_Idle_Stance_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 5
+        width: 40
+        height: 53
+      alignment: 9
+      pivot: {x: 0.24, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

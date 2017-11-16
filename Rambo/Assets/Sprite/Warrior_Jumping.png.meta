@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d2ab4a01b7dec5346ad5524c2aaf63c2
-timeCreated: 1510768457
+guid: b7dcaa0673ef29648b8c166e507b00a3
+timeCreated: 1510851592
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Fire_Golem_1
-    21300002: Fire_Golem_2
-    21300004: Fire_Golem_3
-    21300006: Fire_Golem_0
+    21300000: Warrior_Jumping_0
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -44,7 +41,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -90,54 +87,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire_Golem_1
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 68
-        width: 59
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fire_Golem_2
+      name: Warrior_Jumping_0
       rect:
         serializedVersion: 2
         x: 5
         y: 4
-        width: 57
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fire_Golem_3
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 4
-        width: 58
-        height: 54
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fire_Golem_0
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 68
-        width: 59
-        height: 55
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 46
+        height: 52
+      alignment: 9
+      pivot: {x: 0.71, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
