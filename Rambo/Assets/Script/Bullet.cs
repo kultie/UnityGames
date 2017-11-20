@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
     public float speed = 200f;
     public GameObject hitEffect;
-    private PlayerController player;
+    private PlayerControlv2 player;
     public float bulletLifeTime = 0.5f;
     public float timeDestroy = 0.55f;
     Animator anim;
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour {
     {//find playercontroller objects
         Destroy(this.gameObject, timeDestroy);
         rb2D = GetComponent<Rigidbody2D>();
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerControlv2>();
         anim = GetComponent<Animator>();
         if (player.transform.localScale.x < 0)
         {//flip side when player flip

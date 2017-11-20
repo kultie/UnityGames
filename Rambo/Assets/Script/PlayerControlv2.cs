@@ -13,7 +13,9 @@ public class PlayerControlv2 : MonoBehaviour
     private float moveVelocity;
     private bool facingLeft = false;
     private bool canMove;
+
     //What jump need
+
     public float jumpHeight;
     public float gravityScale;
     //Checking for jumping
@@ -21,45 +23,54 @@ public class PlayerControlv2 : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask WhatIsGround;
     public bool grounded;
+
+
     //Aimate, physics, and the current level system
     private Animator anim;
     private Rigidbody2D myrigidbody2D;
     //Camera Effects
     public CameraShake cameraShake;
 
-    //public bool die = false;
+
+    //Attack
+    public float attackRate = 0.12f;
+    
+    public string[] comboParams;
+    public int comboIndex = 0;
+    public float resetTimer;
+
+    float cant_moveTime;
+    float cant_attackTime;
+    float cant_jumpTime;
+    bool canAttack;
 
     void flip()
-    {//funciont for flip
+    {
         facingLeft = !facingLeft;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
     }
     public void jump()
-    {//function for jumping
-        if (grounded)
-        { //Can only jump if on the ground and can jump
+    {
+        if (grounded && cant_jumpTime <= 0)
+        {
             Debug.Log("Jumping");
             myrigidbody2D.AddForce(Vector2.up * jumpHeight);
         }
     }
-    public void onAir() {
+    public void onAir()
+    {
         if (!grounded)
         {
             moveSpeed = moveSpeedOnAir;
+            canAttack = false;
+            
         }
-        else {
-            moveSpeed = moveSpeedNormal;
-        }
-    }
-    public void changeStance() {
-        if (battleStanceTime > 0)
+        else
         {
-            anim.SetBool("Battling", true);
-        }
-        else {
-            anim.SetBool("Battling", false);
+            moveSpeed = moveSpeedNormal;
+            canAttack = true;
         }
     }
     public void moving(float moveInput)
@@ -89,17 +100,18 @@ public class PlayerControlv2 : MonoBehaviour
     }
     private void Awake()
     {
+        if (comboParams == null || (comboParams != null && comboParams.Length == 0))
+            comboParams = new string[] { "Attack1", "Attack2", "Attack3" };
         cameraShake = FindObjectOfType<CameraShake>().GetComponent<CameraShake>();
         anim = GetComponent<Animator>();
         myrigidbody2D = GetComponent<Rigidbody2D>();
     }
     void Start()
-    {   //What you need when the game start? EVERYTHINGS
+    {
         canMove = true;
     }
     void FixedUpdate()
-    {//by a fixed time pass
-        //moving (Input.GetAxis("Horizontal"));//this will be disable in the apk file
+    {
     }
     void falling()
     {
@@ -112,19 +124,37 @@ public class PlayerControlv2 : MonoBehaviour
             myrigidbody2D.gravityScale = 1;
         }
     }
-    // Update is called once per frame
+    void timeControl() {
+        cant_attackTime -= Time.deltaTime;
+        cant_jumpTime -= Time.deltaTime;
+        resetTimer += Time.deltaTime;
+        cant_moveTime -= Time.deltaTime;
+    }
     void Update()
     {
+        timeControl();
+        if (cant_moveTime >= 0)
+        {
+            canMove = false;
+            myrigidbody2D.velocity = new Vector3(0, 0);
+        }
+        else {
+            canMove = true;
+        }
         battleStanceTime -= Time.deltaTime;
+        if (battleStanceTime > 0) {
+            anim.SetBool("Battling", true);
+        }
+        else
+        {
+            anim.SetBool("Battling", false);
+        }
         onAir();
         moving(Input.GetAxisRaw("Horizontal"));
         if (Input.GetKey(KeyCode.C))
         {
+            cant_attackTime = 0.3f;
             jump();
-        }
-        if (Input.GetKey(KeyCode.Z))
-        {
-            StartCoroutine(attack1());
         }
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, WhatIsGround);//Are you on the ground?
         anim.SetBool("Grounded", grounded);//When on the ground
@@ -132,12 +162,35 @@ public class PlayerControlv2 : MonoBehaviour
         moveVelocity = 0f;
         anim.SetFloat("Speed", Mathf.Abs(myrigidbody2D.velocity.x));//Get the speed for 
         falling();
-        changeStance();
+        attack();
     }
-    IEnumerator attack1(){
-        anim.SetBool("Attacking", true);
-        yield return new WaitForSeconds(0.12f);
-        anim.SetBool("Attacking", false);
-        battleStanceTime = 3f;
+    void attack() {
+        if (Input.GetKeyDown(KeyCode.Z) && comboIndex < comboParams.Length && cant_attackTime <= 0 && canAttack)
+        {
+            cant_jumpTime = 0.8f;
+            battleStanceTime = 5f;
+            attackRate = 0.35f;
+            if (comboIndex == 2)
+            {
+                cant_moveTime = 0.8f;
+                cant_attackTime = 0.8f;
+            }
+            else
+            {
+                cant_moveTime = 0.5f;
+            }
+            Debug.Log(comboParams[comboIndex] + " triggered");
+            anim.SetTrigger(comboParams[comboIndex]);
+            comboIndex++;
+            resetTimer = 0f;
+        }
+        if (comboIndex > 0)
+        {
+            if (resetTimer > attackRate)
+            {
+                anim.SetTrigger("Reset");
+                comboIndex = 0;
+            }
+        }
     }
 }

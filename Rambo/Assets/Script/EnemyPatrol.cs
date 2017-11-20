@@ -23,7 +23,31 @@ public class EnemyPatrol : MonoBehaviour {
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+    public bool knockFromRight = true;
+    //public int pointsOnDeath;
     // Use this for initialization
+    public void getHit(float knockBackForce)
+    {//When you get hit
+        
+            if (knockFromRight)
+            {
+                Debug.Log("Get knockFromRight");
+                rb.AddForce(Vector2.right * knockBackForce);
+                if (!facingLeft)
+                {
+                    Flip();
+                }
+            }
+            else
+            {
+            Debug.Log("Get knockFromLeft");
+            rb.AddForce(Vector2.left * knockBackForce);
+                if (facingLeft)
+                {
+                    Flip();
+                }
+            }
+    }
     void Start()
     {
         anim = GetComponent<Animator>();

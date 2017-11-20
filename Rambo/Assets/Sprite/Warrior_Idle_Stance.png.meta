@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1411f46c5d26b4e4795f83482365806b
-timeCreated: 1510854713
+timeCreated: 1510920855
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,7 @@ TextureImporter:
     21300002: Warrior_Idle_Stance_1
     21300004: Warrior_Idle_Stance_2
     21300006: Warrior_Idle_Stance_3
+    21300008: Warrior_Idle_Stance_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -94,11 +95,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 69
+        y: 133
         width: 40
         height: 54
       alignment: 9
-      pivot: {x: 0.24, y: 0}
+      pivot: {x: 0.23, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -107,11 +108,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 117
-        y: 69
+        y: 133
         width: 40
         height: 54
       alignment: 9
-      pivot: {x: 0.24, y: 0}
+      pivot: {x: 0.23, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -120,11 +121,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 5
+        y: 69
         width: 40
         height: 54
       alignment: 9
-      pivot: {x: 0.24, y: 0}
+      pivot: {x: 0.23, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -133,11 +134,24 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 117
-        y: 5
+        y: 69
         width: 40
         height: 53
       alignment: 9
-      pivot: {x: 0.24, y: 0}
+      pivot: {x: 0.23, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Warrior_Idle_Stance_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 5
+        width: 40
+        height: 54
+      alignment: 9
+      pivot: {x: 0.23, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

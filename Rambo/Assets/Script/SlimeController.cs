@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SlimeController : MonoBehaviour {
-    public float speed;
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask WhatIsGround;
@@ -19,7 +18,6 @@ public class SlimeController : MonoBehaviour {
         anim = GetComponent<Animator>();
         ePatrol = GetComponent<EnemyPatrol>();
         eManager = GetComponent<EnemyManager>();
-        ePatrol.moveSpeed = speed;
 	}
 	
 	// Update is called once per frame
@@ -43,6 +41,7 @@ public class SlimeController : MonoBehaviour {
     }
     IEnumerator death() {
         anim.SetBool("Dead", true);
+        
         yield return new WaitForSeconds(0.76f);
         Destroy(this.gameObject);
     }
