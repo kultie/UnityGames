@@ -31,6 +31,11 @@ public class PlayerControlv2 : MonoBehaviour
     //Camera Effects
     public CameraShake cameraShake;
 
+    public float knockBackForce;
+    public float knockbackCount;
+    public float knockbackLength;
+    public bool knockFromRight = true;
+
 
     //Attack
     public float attackRate = 0.12f;
@@ -129,6 +134,7 @@ public class PlayerControlv2 : MonoBehaviour
         cant_jumpTime -= Time.deltaTime;
         resetTimer += Time.deltaTime;
         cant_moveTime -= Time.deltaTime;
+        knockbackCount -= Time.deltaTime;
     }
     void Update()
     {
@@ -136,7 +142,7 @@ public class PlayerControlv2 : MonoBehaviour
         if (cant_moveTime >= 0)
         {
             canMove = false;
-            myrigidbody2D.velocity = new Vector3(0, 0);
+            myrigidbody2D.velocity = new Vector3(0, myrigidbody2D.velocity.y);
         }
         else {
             canMove = true;
@@ -162,6 +168,7 @@ public class PlayerControlv2 : MonoBehaviour
         moveVelocity = 0f;
         anim.SetFloat("Speed", Mathf.Abs(myrigidbody2D.velocity.x));//Get the speed for 
         falling();
+        getHit();
         attack();
     }
     void attack() {
@@ -172,8 +179,10 @@ public class PlayerControlv2 : MonoBehaviour
             attackRate = 0.35f;
             if (comboIndex == 2)
             {
-                cant_moveTime = 0.8f;
                 cant_attackTime = 0.8f;
+                cant_moveTime = 0.8f;
+                
+                canAttack = false;
             }
             else
             {
@@ -191,6 +200,35 @@ public class PlayerControlv2 : MonoBehaviour
                 anim.SetTrigger("Reset");
                 comboIndex = 0;
             }
+        }
+    }
+    public void getHit()
+    {
+        //cant_attackTime = knockbackCount + 0.3f;
+        if (knockbackCount > 0)
+        {
+            canAttack = false;
+            anim.SetBool("Hit", true);//Animate
+            if (knockFromRight)
+            {//When you get hit from the right
+                myrigidbody2D.velocity = new Vector2(-knockBackForce, 2f);
+                if (facingLeft)
+                {
+                    flip();
+                }
+            }
+            else
+            {//And from the left
+                myrigidbody2D.velocity = new Vector2(knockBackForce, 2f);
+                if (!facingLeft)
+                {
+                    flip();
+                }
+            }
+        }
+        else
+        {//The knock back time is over now you can do things
+            canMove = true;
         }
     }
 }

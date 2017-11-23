@@ -15,37 +15,27 @@ public class EnemyPatrol : MonoBehaviour {
     public LayerMask WhatIsWall;
     private bool hitWall;
 
+
+    public bool knockFromRight = true;
     private Rigidbody2D rb;
-    void Flip()
+    public void flip()
     { //function check for flip the enemy when it changing side
         facingLeft = !facingLeft;
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-    public bool knockFromRight = true;
     //public int pointsOnDeath;
     // Use this for initialization
     public void getHit(float knockBackForce)
-    {//When you get hit
-        
+    {        
             if (knockFromRight)
             {
-                Debug.Log("Get knockFromRight");
-                rb.AddForce(Vector2.right * knockBackForce);
-                if (!facingLeft)
-                {
-                    Flip();
-                }
+            rb.AddForce(Vector2.right * knockBackForce);
             }
             else
             {
-            Debug.Log("Get knockFromLeft");
             rb.AddForce(Vector2.left * knockBackForce);
-                if (facingLeft)
-                {
-                    Flip();
-                }
             }
     }
     void Start()
@@ -69,11 +59,11 @@ public class EnemyPatrol : MonoBehaviour {
         }
         if (!moveLeft && facingLeft)
         {//if not moving to the left and facing to the left then flip
-            Flip();
+            flip();
         }
         if (moveLeft && !facingLeft)
         {//if moving to the left but not facing to the left then flip
-            Flip();
+            flip();
         }
     }
     // Update is called once per frame
@@ -87,11 +77,11 @@ public class EnemyPatrol : MonoBehaviour {
             moving();
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {//function for not continuingly hitting the player, still got some buggin but work fine
         if (other.tag == "Player")
         {
             moveLeft = !moveLeft;
         }
-    }
+    }*/
 }

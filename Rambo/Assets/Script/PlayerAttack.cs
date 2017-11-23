@@ -20,6 +20,7 @@ public class PlayerAttack : MonoBehaviour {
             if (player.transform.position.x > other.transform.position.x)
             {
                 ePatrol.knockFromRight = false;
+                
             }
             else
             {
