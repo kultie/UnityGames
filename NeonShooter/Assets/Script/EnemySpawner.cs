@@ -20,14 +20,14 @@ public class EnemySpawner : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        Vector2 pos = new Vector2(Random.Range(-12, 12),(Random.Range(-5, 5 )));
+        Vector2 pos = new Vector2(Random.Range(-12.0f, 12.0f),(Random.Range(-5.0f, 5.0f )));
         if (resetPosTimeCounter <= 0) {
             transform.position = pos;
             resetPosTimeCounter = resetPosTimer;
             if (enemyCounter < enemyNumber)
             {
                 int enemyRandom = Random.Range(1, 100);
-                if (enemyRandom > 20)
+                if (enemyRandom > 10)
                 {
                     Instantiate(enemies[0], transform.position, Quaternion.identity);
                 }

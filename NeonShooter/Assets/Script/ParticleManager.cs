@@ -2,43 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleManager<T>
+public class ParticleManager : MonoBehaviour
 {
-    public class customParticle
-    {
-        public SpriteRenderer sp;
-        public Vector2 Position;
-        public float Orientation;
-
-        public Vector2 Scale = Vector2.one;
-
-        public Color Color;
-        public float Duration;
-        public float PercentLife = 1f;
-        public T State;
+    public void orbit(Transform target, Vector3 dir, float orbitDistance, float speed, float orbitCoffiency) {
+        Quaternion rotation = Quaternion.LookRotation(dir);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 5 * Time.deltaTime);
+        transform.position = target.transform.position + (transform.position - target.transform.position).normalized * orbitDistance;
+        transform.RotateAround(target.transform.position, Vector3.forward, orbitCoffiency * speed * Time.deltaTime);
     }
-    private class CircularParticleArray
+    private void Update()
     {
-        private int start;
-        public int Start
+        if (transform.localScale.x <= 0 || transform.localScale.y <= 0)
         {
-            get { return start; }
-            set { start = value % list.Length; }
-        }
-
-        public int Count { get; set; }
-        public int Capacity { get { return list.Length; } }
-        private customParticle[] list;
-
-        public CircularParticleArray(int capacity)
-        {
-            list = new customParticle[capacity];
-        }
-
-        public customParticle this[int i]
-        {
-            get { return list[(start + i) % list.Length]; }
-            set { list[(start + i) % list.Length] = value; }
+            Destroy(gameObject);
         }
     }
 }
