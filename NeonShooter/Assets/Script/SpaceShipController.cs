@@ -10,7 +10,6 @@ public class SpaceShipController : MonoBehaviour
     private Vector3 target;
 
     public Transform BulletPref;
-    public LayerMask notToHit;
     public float timeInterval = 0.05f;
     float currentShootTime;
     float timeToFire = 0;
@@ -32,7 +31,6 @@ public class SpaceShipController : MonoBehaviour
     {
         Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
         Vector2 firePointPos = new Vector2(firePoint.position.x, firePoint.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(firePointPos, mousePos - firePointPos, 100, notToHit);
         if (currentShootTime <= 0f)
         {
             Effect();
@@ -43,7 +41,12 @@ public class SpaceShipController : MonoBehaviour
     }
     void Effect()
     {
-        Instantiate(BulletPref, firePoint.position, Quaternion.Euler(0f, 0f, rotZ + rotationOffSet));
+        GameObject obj = ObjectPooler.currentPool.getPooledObject();
+        if (obj == null) return;
+        obj.transform.position = firePoint.position;
+        obj.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffSet);
+        obj.SetActive(true);
+        //Instantiate(BulletPref, firePoint.position, Quaternion.Euler(0f, 0f, rotZ + rotationOffSet));
 
     }
     void triRot()

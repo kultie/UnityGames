@@ -81,19 +81,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\AroundShooter.cs" />
     <Compile Include="Assets\Script\BlackHole.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\CharacterManager.cs" />
-    <Compile Include="Assets\Script\CircularParticleArray.cs" />
     <Compile Include="Assets\Script\EnemySpawner.cs" />
     <Compile Include="Assets\Script\FpsDisplay.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\ParticleManager.cs" />
-    <Compile Include="Assets\Script\PlayerBullet.cs" />
+    <Compile Include="Assets\Script\Grid.cs" />
+    <Compile Include="Assets\Script\Interpolate.cs" />
+    <Compile Include="Assets\Script\ObjectManager.cs" />
+    <Compile Include="Assets\Script\ObjectPooler.cs" />
+    <Compile Include="Assets\Script\PointMass.cs" />
     <Compile Include="Assets\Script\RigidBody2DExtension.cs" />
-    <Compile Include="Assets\Script\SimplePool.cs" />
     <Compile Include="Assets\Script\SpaceShipController.cs" />
+    <Compile Include="Assets\Script\Spring.cs" />
     <Compile Include="Assets\Script\StarAction.cs" />
     <Compile Include="Assets\Script\StarBullet.cs" />
     <Compile Include="Assets\SpriteGlow-master\Assets\Scripts\GlowColorRandomizer.cs" />
