@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour {  
     SpriteRenderer sp;
+    ObjectPooler particlePool;
     public void destroy()
     {
         gameObject.SetActive(false);
@@ -25,8 +26,8 @@ public class ObjectManager : MonoBehaviour {
         {
             destroy();
         }
-        if (Mathf.Abs(transform.position.x) > 10 || Mathf.Abs(transform.position.y) > 5) {
+        if (!sp.IsVisibleFrom(Camera.main)) {
             destroy();
+            }
         }
     }
-}

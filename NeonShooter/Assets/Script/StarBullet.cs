@@ -23,14 +23,5 @@ public class StarBullet :Bullet {
     }
     private void Update() {
         fade();
-        if (timeUntilAction <= 0)
-        {
-            base.bulletAction(starBulletSpeed);
-        }
-        else
-        {
-            timeUntilAction -= Time.deltaTime;
-        }
-
     }
 }

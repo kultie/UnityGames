@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpaceShipController : MonoBehaviour
 {
-    public float moveSpeed = 8f;
+    public ObjectPooler bulletPool;
     public float rotationOffSet = 0;
     public float mouseOffSetToMoving = 0.5f;
     private Vector3 target;
@@ -41,7 +41,7 @@ public class SpaceShipController : MonoBehaviour
     }
     void Effect()
     {
-        GameObject obj = ObjectPooler.currentPool.getPooledObject();
+        GameObject obj = bulletPool.getPooledObject();
         if (obj == null) return;
         obj.transform.position = firePoint.position;
         obj.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffSet);
@@ -58,36 +58,6 @@ public class SpaceShipController : MonoBehaviour
         rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffSet);
     }
-    /*void triMov()
-    {
-        float currentAccelRate = shipAccelRate;
-        if (Input.GetAxisRaw("Vertical") > 0.1f)
-            target = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
-        {
-            if (canMove)
-            {
-                rb.AddForce(transform.up * currentAccelRate);
-                if (rb.velocity.magnitude > shipMaxSpeed)
-                {
-                    currentAccelRate = 0;
-                }
-                else
-                {
-                    currentAccelRate = shipAccelRate;
-                }
-            }
-        }
-    }*/
-    void triMov()
-    {
-        
-        if (Input.GetAxisRaw("Vertical") > 0.1f)
-        {
-            target = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
-            transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
-                //rb.AddForce(target - transform.position);
-        }
-    }
     // Update is called once per frame
     void Update()
     {
@@ -100,7 +70,6 @@ public class SpaceShipController : MonoBehaviour
         else {
             sp.enabled = true;
         }
-        triMov();
         triRot();
         shoot();
     }

@@ -7,6 +7,8 @@ public class BlackHole : MonoBehaviour
     public float force;
     public float radius;
     public float deadRadius;
+
+    float sprayAngle;
     Grid grid;
 
     Rigidbody2D rb;
@@ -45,14 +47,6 @@ public class BlackHole : MonoBehaviour
                 if (col.transform.localScale.magnitude > 1) {
                     col.transform.localScale = Vector3.one;
                 }
-            }
-        }
-    }
-    private void OnDestroy()
-    {
-        foreach (Collider2D col in Physics2D.OverlapCircleAll(transform.position, radius)) {
-            if (!col.GetComponent<Bullet>().enabled) {
-                col.GetComponent<Bullet>().enabled = true;
             }
         }
     }
