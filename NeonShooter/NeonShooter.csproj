@@ -85,6 +85,7 @@
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\CameraFitting.cs" />
     <Compile Include="Assets\Script\CharacterManager.cs" />
+    <Compile Include="Assets\Script\EnemyController.cs" />
     <Compile Include="Assets\Script\EnemySpawner.cs" />
     <Compile Include="Assets\Script\Explosion.cs" />
     <Compile Include="Assets\Script\FpsDisplay.cs" />
@@ -98,7 +99,6 @@
     <Compile Include="Assets\Script\RendererExtensions.cs" />
     <Compile Include="Assets\Script\RigidBody2DExtension.cs" />
     <Compile Include="Assets\Script\SpaceShipController.cs" />
-    <Compile Include="Assets\Script\SpaceShipMove.cs" />
     <Compile Include="Assets\Script\Spring.cs" />
     <Compile Include="Assets\Script\StarAction.cs" />
     <Compile Include="Assets\Script\StarBullet.cs" />

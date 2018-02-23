@@ -8,7 +8,6 @@ public class BlackHole : MonoBehaviour
     public float radius;
     public float deadRadius;
 
-    float sprayAngle;
     Grid grid;
 
     Rigidbody2D rb;
@@ -19,20 +18,26 @@ public class BlackHole : MonoBehaviour
     }
     private void Update()
     {
+        float relativeMassCoffiency = 0;
         grid.ApplyImplosiveForce(2f,transform.position,1.5f);
         foreach (Collider2D col in Physics2D.OverlapCircleAll(transform.position, radius))
         {
+            
             Rigidbody2D colRb = col.GetComponent<Rigidbody2D>();
-            float relativeMassCoffiency = colRb.mass / rb.mass;
+            if (colRb != null)
+            {
+                relativeMassCoffiency = colRb.mass / rb.mass;
+            }
             Vector3 relativePos = transform.position - col.transform.position;
             float relativePosMagnitude = relativePos.magnitude;
             relativePos.Normalize();
-            float angle = Mathf.Atan2(relativePos.y, relativePos.x) * Mathf.Rad2Deg;
+ 
 
             if (col.gameObject.tag == "Bullet")
             {
                 col.GetComponent<Bullet>().enabled = false;
-                col.GetComponent<ObjectManager>().orbit(transform,Vector3.forward, (relativePosMagnitude -= Time.deltaTime)*relativeMassCoffiency *5, force * (rb.mass/colRb.mass) * 1/relativePosMagnitude, (1/ relativeMassCoffiency) + Time.deltaTime);
+                col.GetComponent<ObjectManager>().orbit(transform, Vector3.forward, relativePosMagnitude -= (Time.deltaTime*2), 
+                    force * (rb.mass / colRb.mass) * 1 / relativePosMagnitude, (1 / relativeMassCoffiency) + Time.deltaTime);
                 col.transform.localScale = Vector3.one * relativePosMagnitude / radius;
                 if (relativePosMagnitude <= deadRadius)
                 {
@@ -40,13 +45,18 @@ public class BlackHole : MonoBehaviour
                     col.GetComponent<Bullet>().enabled = true;
                 }
             }
-            else
+            else if (col.gameObject.tag == "Player")
             {
-                col.GetComponent<CharacterManager>().orbit(transform, Vector3.forward, relativePosMagnitude -= Time.deltaTime * relativeMassCoffiency, force * (rb.mass / colRb.mass) * 1 / relativePosMagnitude, (1 / relativeMassCoffiency) + Time.deltaTime);
-                col.transform.localScale = Vector3.one * relativePosMagnitude/radius;
-                if (col.transform.localScale.magnitude > 1) {
+                col.GetComponent<CharacterManager>().orbit(transform, Vector3.forward, 
+                    relativePosMagnitude -= Time.deltaTime * relativeMassCoffiency, force * (rb.mass / colRb.mass) * 1 / relativePosMagnitude, (1 / relativeMassCoffiency) + Time.deltaTime);
+                col.transform.localScale = Vector3.one * relativePosMagnitude / radius;
+                if (col.transform.localScale.magnitude > 1)
+                {
                     col.transform.localScale = Vector3.one;
                 }
+            }
+            else if (col.gameObject.tag == "normalParticle") {
+                col.GetComponent<Particle>().orbit(transform, Vector3.forward, relativePosMagnitude -= Time.deltaTime * 5, force/ relativePosMagnitude, (1 / 5) + Time.deltaTime);
             }
         }
     }

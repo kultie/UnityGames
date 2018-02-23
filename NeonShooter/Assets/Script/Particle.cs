@@ -3,30 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Particle : MonoBehaviour {
-    BlackHole[] blackholes;
     public float maxSpeed;
     public float minSpeed;
     float speed;
-    float currentSpeed;
-    float duration = 1f;
+    public float currentSpeed;
+    public float duration = 1f;
     private float startTime;
+
+    bool bounced = false;
+    public int dir;
     public SpriteRenderer sp;
     private void Awake()
     {
-        blackholes = FindObjectsOfType<BlackHole>();
         sp = GetComponent<SpriteRenderer>();
     }
     // Use this for initialization
     private void OnEnable()
     {
-        sp.color = new Color(1f, 1f, 1f, 1f);
+        bounced = false;
+        dir = 1;
         startTime = Time.time;
         speed = Random.Range(minSpeed,maxSpeed);
         currentSpeed = speed;
-        Invoke("destroy", 1f);
-    }
+        Invoke("destroy", duration);
+}
     private void OnDisable()
     {
+        setColor(new Vector3(1f, 1f, 1f),1f);
         CancelInvoke();
     }
     private void destroy()
@@ -40,24 +43,26 @@ public class Particle : MonoBehaviour {
     }
     void fade() {
         float t = (Time.time - startTime) / duration;
-        sp.color = new Color(1f, 1f, 1f, Mathf.SmoothStep(1, 0, t));
+        sp.color = new Color(sp.color.r,sp.color.g,sp.color.b, Mathf.SmoothStep(1, 0, t));
         transform.localScale = new Vector2(transform.localScale.x, Mathf.SmoothStep(1.94f, 0, t));
     }
     private void move()
     {
-        if (currentSpeed > 0)
+        currentSpeed = Mathf.SmoothStep(speed, 0, (Time.time - startTime) / duration);
+        /*if (currentSpeed > 0)
         {
             currentSpeed -= Time.deltaTime * 10f;
         }
         else
         {
             currentSpeed += Time.deltaTime * 2f;
-        }
-        transform.Translate(Vector3.up * Time.deltaTime * currentSpeed);
-        if (!sp.IsVisibleFrom(Camera.main))
+        }*/
+        if (!sp.IsVisibleFrom(Camera.main) && bounced == false)
         {
-            currentSpeed = -1 * speed;
+            bounced = true;
+            dir = -1;
         }
+        transform.Translate(Vector3.up * Time.deltaTime * currentSpeed * dir);
     }
     public void orbit(Transform target, Vector3 dir, float orbitDistance, float speed, float orbitCoffiency)
     {
@@ -66,9 +71,7 @@ public class Particle : MonoBehaviour {
         transform.position = target.transform.position + (transform.position - target.transform.position).normalized * orbitDistance;
         transform.RotateAround(target.transform.position, Vector3.forward, orbitCoffiency * speed * Time.deltaTime);
     }
-    void blackholeInteract() {
-        foreach(BlackHole blackhole in blackholes){
-
-        }
+    public void setColor(Vector3 color, float a) {
+        sp.color = new Color(color.x, color.y, color.z,a);
     }
 }

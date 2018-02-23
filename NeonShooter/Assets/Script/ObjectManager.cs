@@ -7,6 +7,7 @@ public class ObjectManager : MonoBehaviour {
     ObjectPooler particlePool;
     public void destroy()
     {
+        GetComponent<Bullet>().enabled = true;
         gameObject.SetActive(false);
     }
     private void Start()
@@ -26,7 +27,7 @@ public class ObjectManager : MonoBehaviour {
         {
             destroy();
         }
-        if (!sp.IsVisibleFrom(Camera.main)) {
+        if (Mathf.Abs(transform.position.y) > 4.8 || Mathf.Abs(transform.position.x) > 6.5) {
             destroy();
             }
         }

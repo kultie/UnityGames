@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpaceShipController : MonoBehaviour
 {
+    public float speed = 8f;
     public ObjectPooler bulletPool;
     public float rotationOffSet = 0;
     public float mouseOffSetToMoving = 0.5f;
@@ -18,7 +19,7 @@ public class SpaceShipController : MonoBehaviour
 
     public float timeUntilRespawn;
     SpriteRenderer sp;
-
+    Vector2 mousePos;
     private Rigidbody2D rb;
 
     public bool IsDead { get { return timeUntilRespawn > 0; } }
@@ -29,8 +30,8 @@ public class SpaceShipController : MonoBehaviour
     }
     public void shoot()
     {
-        Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
-        Vector2 firePointPos = new Vector2(firePoint.position.x, firePoint.position.y);
+        //Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+        //Vector2 firePointPos = new Vector2(firePoint.position.x, firePoint.position.y);
         if (currentShootTime <= 0f)
         {
             Effect();
@@ -49,6 +50,13 @@ public class SpaceShipController : MonoBehaviour
         //Instantiate(BulletPref, firePoint.position, Quaternion.Euler(0f, 0f, rotZ + rotationOffSet));
 
     }
+    void triMove() {
+        Vector2 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
+        if (Input.GetKey(KeyCode.Z))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
+        }
+    }
     void triRot()
     {
 
@@ -61,6 +69,7 @@ public class SpaceShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        triMove();
         if (IsDead)
         {
             sp.enabled = false;
