@@ -59,7 +59,7 @@ public static class InputHandle
         }
     }
 
-    static void ReleaseKey(string keyCode)
+    static void ReleaseKey(KeyCode keyCode)
     {
         inputQueue.RemoveAll(c => c.Equals(keyCode));
     }
@@ -70,7 +70,7 @@ public static class InputHandle
         {
             return inputQueue[inputQueue.Count - 1];
         }
-        return null;
+        return KeyCode.None;
     }
 
     public static void ClearInputQueue()
