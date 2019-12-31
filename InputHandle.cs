@@ -5,7 +5,7 @@ using UnityEngine;
 public static class InputHandle
 {
 
-    static List<string> inputQueue = new List<string>();
+    static List<KeyCode> inputQueue = new List<KeyCode>();
 
     public static void UpdateInput()
     {
@@ -17,22 +17,22 @@ public static class InputHandle
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            inputQueue.Add("Up");
+            inputQueue.Add(KeyCode.UpArrow);
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            inputQueue.Add("Down");
+            inputQueue.Add(KeyCode.DownArrow);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            inputQueue.Add("Left");
+            inputQueue.Add(KeyCode.LeftArrow);
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            inputQueue.Add("Right");
+            inputQueue.Add(KeyCode.RightArrow);
         }
     }
 
@@ -42,19 +42,19 @@ public static class InputHandle
         {
             if (Input.GetKeyUp(KeyCode.UpArrow))
             {
-                ReleaseKey("Up");
+                ReleaseKey(KeyCode.UpArrow);
             }
             if (Input.GetKeyUp(KeyCode.DownArrow))
             {
-                ReleaseKey("Down");
+                ReleaseKey(KeyCode.DownArrow);
             }
             if (Input.GetKeyUp(KeyCode.LeftArrow))
             {
-                ReleaseKey("Left");
+                ReleaseKey(KeyCode.LeftArrow);
             }
             if (Input.GetKeyUp(KeyCode.RightArrow))
             {
-                ReleaseKey("Right");
+                ReleaseKey(KeyCode.RightArrow);
             }
         }
     }
@@ -64,13 +64,13 @@ public static class InputHandle
         inputQueue.RemoveAll(c => c.Equals(keyCode));
     }
 
-    public static string GetLastInput()
+    public static KeyCode GetLastInput()
     {
         if (inputQueue.Count != 0)
         {
             return inputQueue[inputQueue.Count - 1];
         }
-        return string.Empty;
+        return null;
     }
 
     public static void ClearInputQueue()
