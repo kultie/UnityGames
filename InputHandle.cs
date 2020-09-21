@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+namespace Kultie{
 public static class InputHandle
 {
 
@@ -77,4 +77,5 @@ public static class InputHandle
     {
         inputQueue.Clear();
     }
+}
 }
